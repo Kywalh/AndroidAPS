@@ -1,6 +1,11 @@
 name: Auto-build official AAPS releases
 
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/auto-aaps-release.yml'
   schedule:
     # Daily check. This workflow is scoped to this repository only.
     - cron: '17 5 * * *'
